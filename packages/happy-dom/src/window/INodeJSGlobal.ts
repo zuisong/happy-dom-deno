@@ -51,7 +51,7 @@ interface INodeJSGlobal {
 	 */
 	escape: (str: string) => string;
 	eval: typeof eval;
-	global: NodeJS.Global;
+	// global: NodeJS.Global;
 	isFinite: typeof isFinite;
 	isNaN: typeof isNaN;
 	parseFloat: typeof parseFloat;

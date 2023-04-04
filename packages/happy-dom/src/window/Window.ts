@@ -108,9 +108,9 @@ import PluginArray from '../navigator/PluginArray';
 import Fetch from '../fetch/Fetch';
 import { default as RangeImplementation } from '../range/Range';
 import DOMRect from '../nodes/element/DOMRect';
-import VMGlobalPropertyScript from './VMGlobalPropertyScript';
+// import VMGlobalPropertyScript from './VMGlobalPropertyScript';
 import * as PerfHooks from 'perf_hooks';
-import VM from 'vm';
+import VM from './vm';
 import { Buffer } from 'buffer';
 import XMLHttpRequestImplementation from '../xml-http-request/XMLHttpRequest';
 import XMLHttpRequestUpload from '../xml-http-request/XMLHttpRequestUpload';
@@ -797,12 +797,12 @@ export default class Window extends EventTarget implements IWindow {
 	 * Setup of VM context.
 	 */
 	protected _setupVMContext(): void {
-		if (!VM.isContext(this)) {
-			VM.createContext(this);
+		// if (!VM.isContext(this)) {
+		// 	VM.createContext(this);
 
-			// Sets global properties from the VM to the Window object.
-			// Otherwise "this.Array" will be undefined for example.
-			VM.runInContext(VMGlobalPropertyScript, this);
-		}
+		// 	// Sets global properties from the VM to the Window object.
+		// 	// Otherwise "this.Array" will be undefined for example.
+		// 	VM.runInContext(VMGlobalPropertyScript, this);
+		// }
 	}
 }
