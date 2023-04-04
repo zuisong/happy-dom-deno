@@ -516,7 +516,7 @@ describe('Fetch', () => {
 								}
 							};
 							(<unknown>request.setTimeout) = () => {};
-							request.destroy = () => destroyCount++;
+							request.destroy = () => { destroyCount++ ; return this};
 
 							return request;
 						}
@@ -644,7 +644,7 @@ describe('Fetch', () => {
 						}
 					};
 					(<unknown>request.setTimeout) = () => {};
-					request.destroy = () => destroyCount++;
+					request.destroy = () => { destroyCount++ ; return this};
 
 					return request;
 				}
@@ -2438,7 +2438,7 @@ describe('Fetch', () => {
 					}
 				};
 				(<unknown>request.setTimeout) = () => {};
-				request.destroy = () => {};
+				request.destroy = () => { return this};
 
 				return request;
 			}
@@ -2537,7 +2537,7 @@ describe('Fetch', () => {
 					}
 				};
 				(<unknown>request.setTimeout) = () => {};
-				request.destroy = () => destroyCount++;
+				request.destroy = () => { destroyCount++ ; return this};
 
 				return request;
 			}
@@ -2607,7 +2607,7 @@ describe('Fetch', () => {
 					}
 				};
 				(<unknown>request.setTimeout) = () => {};
-				request.destroy = () => destroyCount++;
+				request.destroy = () => { destroyCount++ ; return this};
 
 				return request;
 			}
@@ -2677,7 +2677,7 @@ describe('Fetch', () => {
 					}
 				};
 				(<unknown>request.setTimeout) = () => {};
-				request.destroy = () => destroyCount++;
+				request.destroy = () => { destroyCount++ ; return this};
 
 				return request;
 			}
@@ -2745,7 +2745,7 @@ describe('Fetch', () => {
 					}
 				};
 				(<unknown>request.setTimeout) = () => {};
-				request.destroy = () => destroyCount++;
+				request.destroy = () => { destroyCount++ ; return this};
 
 				return request;
 			}
@@ -2813,7 +2813,7 @@ describe('Fetch', () => {
 					}
 				};
 				(<unknown>request.setTimeout) = () => {};
-				request.destroy = () => destroyCount++;
+				request.destroy = () => { destroyCount++ ; return this};
 
 				return request;
 			}
@@ -2881,7 +2881,7 @@ describe('Fetch', () => {
 					}
 				};
 				(<unknown>request.setTimeout) = () => {};
-				request.destroy = () => destroyCount++;
+				request.destroy = () => { destroyCount++ ; return this};
 
 				return request;
 			}
@@ -2949,7 +2949,7 @@ describe('Fetch', () => {
 					}
 				};
 				(<unknown>request.setTimeout) = () => {};
-				request.destroy = () => destroyCount++;
+				request.destroy = () => { destroyCount++ ; return this};
 
 				return request;
 			}
@@ -3017,7 +3017,7 @@ describe('Fetch', () => {
 					}
 				};
 				(<unknown>request.setTimeout) = () => {};
-				request.destroy = () => destroyCount++;
+				request.destroy = () => { destroyCount++ ; return this};
 
 				return request;
 			}
@@ -3106,7 +3106,7 @@ describe('Fetch', () => {
 					}
 				};
 				(<unknown>request.setTimeout) = () => {};
-				request.destroy = () => destroyCount++;
+				request.destroy = () => { destroyCount++ ; return this};
 
 				return request;
 			}
@@ -3180,7 +3180,7 @@ describe('Fetch', () => {
 					}
 				};
 				(<unknown>request.setTimeout) = () => {};
-				request.destroy = () => {};
+				request.destroy = () => { return this};
 
 				return request;
 			}
@@ -3248,7 +3248,7 @@ describe('Fetch', () => {
 					}
 				};
 				(<unknown>request.setTimeout) = () => {};
-				request.destroy = () => destroyCount++;
+				request.destroy = () => { destroyCount++ ; return this};
 
 				return request;
 			}
@@ -3322,7 +3322,7 @@ describe('Fetch', () => {
 					}
 				};
 				(<unknown>request.setTimeout) = () => {};
-				request.destroy = () => destroyCount++;
+				request.destroy = () => { destroyCount++ ; return this};
 
 				return request;
 			}
@@ -3400,7 +3400,7 @@ describe('Fetch', () => {
 					}
 				};
 				(<unknown>request.setTimeout) = () => {};
-				request.destroy = () => {};
+				request.destroy = () => { return this};
 
 				return request;
 			}
