@@ -1,0 +1,32 @@
+name: build action
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - release/*
+
+jobs:
+  build:
+    name: Build on node ${{ matrix.node_version }} on ubuntu-latest
+    runs-on: ubuntu-latest
+    env:
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+    strategy:
+      fail-fast: false
+      matrix:
+        node_version: ["latest", "lts/*"]
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v3.5.1
+        with:
+          node-version: ${{ matrix.node_version }}
+      - name: Build
+        run: |
+          npm i -g pnpm && pnpm i  && pnpm recursive run test
+      # - name: Coveralls
+      #   uses: coverallsapp/github-action@v2
+      #   with:
+      #     base-path: packages/happy-dom

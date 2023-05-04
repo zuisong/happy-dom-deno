@@ -12,8 +12,6 @@
 		"experimentalDecorators": true,
 		"allowSyntheticDefaultImports": true,
 		"resolveJsonModule": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
 		"removeComments": false,
 		"preserveConstEnums": true,
 		"sourceMap": true,

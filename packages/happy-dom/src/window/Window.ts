@@ -112,7 +112,7 @@ import RangeImplementation from '../range/Range.js';
 import DOMRect from '../nodes/element/DOMRect.js';
 import VMGlobalPropertyScript from './VMGlobalPropertyScript.js';
 import * as PerfHooks from 'perf_hooks';
-import VM from 'vm';
+import VM from './vm.js';
 import { Buffer } from 'buffer';
 import XMLHttpRequestImplementation from '../xml-http-request/XMLHttpRequest.js';
 import XMLHttpRequestUpload from '../xml-http-request/XMLHttpRequestUpload.js';
